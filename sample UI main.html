@@ -1,0 +1,72 @@
+<html lang="en"><head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <title>Beer list</title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </head>
+        <body>
+        <div class="container">
+                <h2>Beers</h2>
+                <p>List of beers on tap</p>
+                <form>
+                  <div class="form-group">
+                    <label for="searchBeers"></label>
+                    <input type="beer" class="form-control" id="searchBeers" aria-describedby="tool tip" placeholder="enter beer">
+                    <small id="searchBeers" class="form-text text-muted">enter the name of beer you'd like to search</small>
+                  </div>
+                  <div class="btn-group">
+                      <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="button" class="btn btn-primary" onclick="location.href='file://some filepath;">Filter</button>
+                  </div>
+                </form>
+                <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Beers</th>
+                      <th>Type</th>
+                      <th>Rating</th>
+                      <th>Price</th>
+                      <th>picture</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Allagash white</td>
+                      <td>Wheat</td>
+                      <td>4/5</td>
+                      <td>$4.50</td>
+                      <td>
+                          <div class="card">
+                                <div class="card-body">
+                                    <img src="https://products0.imgix.drizly.com/ci-allagash-white-4423a50f58ad06ae.png?auto=format%2Ccompress&amp;fm=jpeg&amp;q=20" width="25%" height="25%" onclick="location.href='https://google.com';">
+                                </div>
+                          </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                        <tr>
+                          <td>2</td>
+                          <td>Allagash black</td>
+                          <td>stout</td>
+                          <td>4/5</td>
+                          <td>$4.50</td>
+                          <td>
+                                <div class="card">
+                                        <div class="card-body">
+                                          <img src="https://www.totalwine.com/media/sys_master/twmmedia/hac/hdd/8815934799902.png" width="25%" height="25%" onclick="location.href='https://google.com';">
+                                        </div>
+                                      </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                </table>
+                </div>
+              </div>
+</body>
+</html>
