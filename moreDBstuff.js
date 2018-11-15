@@ -4,7 +4,7 @@ var webQuery = querystring.parse('beer=beerID&user=userID');
 var db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Hx$_yab@i#3ZM2^1_G=t!6eXT",
+  password: "",
   database: "mydb"
 
 });
