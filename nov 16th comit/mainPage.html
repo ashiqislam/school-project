@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"></script>
+<script type="text/javascript">
+
+ $(document).ready(function(){
+//    $.getJSON( "index.js", function(beer) {
+//      $.each(beer, function(name,type,rating,price){
+//         var data = "<tr><td>" + name + "</td><td>" + type + "</td><td>"+ rating +"</td><td>" + price +"</td></tr>";
+//         $("table tbody").append(data);
+//  )};
+//  )};
+//the above is commented out since the database hasn't been connected yet
+  var beer =     [["turbodog", "type", "4.5", "3.1"],
+                  ['Alaskan stout', 'type', 4.9, 5.0],
+                  ['allagash tripple', 'type', 3.7, 4.0],
+                  ['liberty ale', 'type', 2.4, 6.8],
+                  ['steam beer', 'type', 4.8, 3.9],
+                  ['hop ottin', 'type', 3.6, 7.8],
+                  ['old foghorn', 'type', 3.0, 7.8],
+                  ['poleeko gold', 'type', 2.8, 5.3],
+                  ['allagash white', 'type', 4.5, 5.1],
+                  ['oberon', 'type', 3.0, 4.4]]
+
+        $.each(beer, function( rowIndex, row ) {
+          var data = "<tr><td>" + row[0] + "</td><td>" + row[1] + "</td><td>"+ row[2] +"</td><td>" + row[3]+"</td></tr>";
+          $("table tbody").append(data);
+        });
+    });
+</script>
+</head>
+<body>
+  <script type="text/javascript">
+    function logCheck(){
+        if (sessionStorage.getItem('status') == null){
+          alert("please sign in to use this feature")
+        }
+    }
+
+  </script>
+<div class = "d-flex justify-content-center">
+  <div class="btn-group">
+      <button type="submit" class="btn btn-info">sign in</button>
+      <button type="submit" class="btn btn-info">register</button>
+      <button onclick="logCheck()" type="submit" class="btn btn-info">Favorites</button>
+
+  </div>
+</div>
+  <script>
+  $(document).ready(function() {
+    $('#example').DataTable( {
+        "paging":   false,
+        "ordering": true,
+        "info":     false
+    } );
+} );
+  </script>
+  <div class = "table-responive">
+    <table id="example" class="table table-striped" style="width:100%">
+        <thead class = "thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Rating</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

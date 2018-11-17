@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class = "center">
+<h1 class>Sign in</h1>
+<form action="/signIn.js" method = "GET">
+  Username:<br>
+  <input type="text" name="firstname" value="" class="userIn">
+  <br>
+  Password:<br>
+  <input type="text" name="lastname" value="" class="userIn">
+  <br><br>
+  <input type="submit" value="Sign in" class= "button" >
+  <script type="text/javascript">
+    jQuery(window).load(function() {
+  sessionStorage.setItem('status','loggedIn')
+});
+  </script>
+</form>
+</div>
+</body>
+</html>

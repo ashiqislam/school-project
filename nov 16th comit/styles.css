@@ -1,0 +1,27 @@
+.button {
+    background-color: #4d79ff;
+    border: none;
+    color: white;
+    padding: 17px 34px;
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.button:active {
+  background-color: #4d79ff;
+  transform: translateY(2px);
+}
+.center{
+
+  margin: auto;
+  width: auto;
+}
+
+.userIn{
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+h1 {
+    text-shadow: 1px 1px gray;
+}
